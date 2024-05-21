@@ -17,7 +17,7 @@ use App\Http\Controllers\UserController;
 |
 */
 
-Route::post('register',[AuthController::class, 'register']);
+Route::post('reg',[AuthController::class, 'register']);
 Route::post('login',[AuthController::class, 'login']);
 Route::get('user',[UserController::class, 'all']);
 
@@ -26,6 +26,6 @@ Route::get('user',[UserController::class, 'all']);
 // });
 
 // protected routes
-Route::middleware('jwt.verify')->group(function(){
-    Route::get('users',[UserController::class, 'index']);
-});
+// Route::middleware('jwt.verify')->group(function(){
+//     Route::get('users',[UserController::class, 'index']);
+// });
